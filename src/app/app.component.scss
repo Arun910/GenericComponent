@@ -1,0 +1,36 @@
+/* Top Navigation Styling */
+.top-nav {
+    background-color: #333;
+    padding: 10px 20px;
+  }
+  
+  .top-nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+  }
+  
+  .top-nav ul li {
+    margin-right: 20px;
+  }
+  
+  .top-nav ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 16px;
+    padding: 6px 12px;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .top-nav ul li a:hover,
+  .top-nav ul li a.active {
+    background-color: #555;
+  }
+  
+  /* Content Area Styling */
+  .content {
+    padding: 20px;
+  }
+  

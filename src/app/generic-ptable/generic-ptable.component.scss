@@ -1,0 +1,110 @@
+/* Ensure table container takes full width */
+.custom-table-container {
+    width: 100%;
+    overflow-x: auto; /* Enables horizontal scrolling */
+    padding: 16px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Force table to have a minimum width */
+.custom-table-container ::ng-deep .p-datatable-wrapper {
+    min-width: 1500px; /* Adjust this to trigger scrolling */
+}
+
+/* Table Header Styling */
+.custom-table-container ::ng-deep .p-datatable-thead > tr > th {
+    background-color: #007bff;
+    color: white;
+    font-weight: bold;
+    text-align: left;
+    padding: 12px;
+    border-bottom: 2px solid #0056b3;
+}
+
+/* Table Body Row Styling */
+.custom-table-container ::ng-deep .p-datatable-tbody > tr {
+    transition: background 0.3s ease-in-out;
+}
+
+.custom-table-container ::ng-deep .p-datatable-tbody > tr:nth-child(even) {
+    background-color: #f8f9fa;
+}
+
+.custom-table-container ::ng-deep .p-datatable-tbody > tr:hover {
+    background-color: #e3f2fd;
+    cursor: pointer;
+}
+
+/* Table Cell Styling */
+.custom-table-container ::ng-deep .p-datatable-tbody > tr > td {
+    padding: 12px;
+    text-align: left;
+    font-size: 14px;
+    border-bottom: 1px solid #dee2e6;
+    min-width: 180px; /* Ensure columns do not shrink */
+}
+
+/* Style for search input field */
+.custom-table-container .search-input {
+    width: 100%; /* Full column width */
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: white;
+    color: #333;
+    font-size: 14px;
+}
+
+/* Placeholder text style */
+.custom-table-container .search-input::placeholder {
+    color: #aaa;
+    font-style: italic;
+}
+
+/* Pagination Styling */
+.custom-table-container ::ng-deep .p-paginator {
+    background-color: #f8f9fa;
+    border-top: 2px solid #ddd;
+    padding: 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Page Number Buttons */
+.custom-table-container ::ng-deep .p-paginator .p-paginator-pages .p-paginator-page {
+    background-color: white;
+    color: #007bff;
+    border: 1px solid #007bff;
+    padding: 6px 12px;
+    border-radius: 4px;
+    margin: 0 4px;
+    transition: all 0.3s ease-in-out;
+}
+
+/* Active Page Button */
+.custom-table-container ::ng-deep .p-paginator .p-paginator-pages .p-paginator-page.p-highlight {
+    background-color: #007bff;
+    color: white;
+    font-weight: bold;
+}
+
+/* Hover Effect for Page Buttons */
+.custom-table-container ::ng-deep .p-paginator .p-paginator-pages .p-paginator-page:hover {
+    background-color: #0056b3;
+    color: white;
+}
+
+/* Table Borders */
+.custom-table-container ::ng-deep .p-datatable-thead > tr > th,
+.custom-table-container ::ng-deep .p-datatable-tbody > tr > td {
+    border-right: 1px solid #ccc;
+}
+
+/* Remove right border for the last column */
+.custom-table-container ::ng-deep .p-datatable-thead > tr > th:last-child,
+.custom-table-container ::ng-deep .p-datatable-tbody > tr > td:last-child {
+    border-right: none;
+}
